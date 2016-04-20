@@ -1,0 +1,18 @@
+{
+  "name": "AwesomeRn",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "dependencies": {
+    "react": "^0.14.8",
+    "react-native": "^0.23.1",
+    "react-native-tab-navigator": "^0.2.18"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^7.0.0",
+    "eslint-plugin-babel": "^3.2.0",
+    "eslint-plugin-react": "^5.0.1"
+  }
+}

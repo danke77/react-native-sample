@@ -1,0 +1,3 @@
+rootProject.name = 'AwesomeRn'
+
+include ':app'
