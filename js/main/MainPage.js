@@ -9,10 +9,10 @@ import React, {
 
 import TabNavigator from 'react-native-tab-navigator';
 
-import HomePage from '../business/HomePage';
-import CategoryPage from '../business/CategoryPage';
-import ShoppingCartPage from '../business/ShoppingCartPage';
-import MinePage from '../business/MinePage';
+import HomePage from '../home/HomePage';
+import CategoryPage from '../category/CategoryPage';
+import ShoppingCartPage from '../shopping_cart/ShoppingCartPage';
+import MinePage from '../mine/MinePage';
 
 const HOME = '首页';
 const ICON_HOME_SELECTED = require('../../images/tabs/home_selected.png');
