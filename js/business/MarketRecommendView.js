@@ -3,19 +3,21 @@ import React, {
   StyleSheet,
   Text,
   Image,
-  Dimensions,
   View,
-  ScrollView,
 } from 'react-native';
 
 import ViewPager from 'react-native-viewpager'; 
 
-var MarketRecomendView = React.createClass({
+const MARKET_RECOMMEND_IMG_URIS = [
+  'http://img.zcool.cn/community/03180ff5714a69c0000011e01abac3c.jpg@500w_376h_1c_1e_1l_2o',
+  'http://img.zcool.cn/community/0314bb75715ac060000011e0154f4dd.jpg@500w_376h_1c_1e_1l_2o',
+  'http://img.zcool.cn/community/031591f5714976c000001ba12400d86.jpg@500w_376h_1c_1e_1l_2o'
+]
+
+var MarketRecommendView = React.createClass({
   getInitialState: function() {
     return {
-      marketImgUri0: 'http://img.zcool.cn/community/0314bb75715ac060000011e0154f4dd.jpg@500w_376h_1c_1e_1l_2o',
-      marketImgUri1: 'http://img.zcool.cn/community/03180ff5714a69c0000011e01abac3c.jpg@500w_376h_1c_1e_1l_2o',
-      marketImgUri2: 'http://img.zcool.cn/community/031591f5714976c000001ba12400d86.jpg@500w_376h_1c_1e_1l_2o'
+      MARKET_RECOMMEND_IMG_URIS
     };
   },
 
@@ -24,9 +26,9 @@ var MarketRecomendView = React.createClass({
       <View>
         <Text style={styles.ads_title}>优店推荐</Text>
         <View style={styles.ads_container}>
-          <Image style={styles.ads_item_side} source={{uri: this.state.marketImgUri0}} />
-          <Image style={styles.ads_item_middle} source={{uri: this.state.marketImgUri1}} />
-          <Image style={styles.ads_item_side} source={{uri: this.state.marketImgUri2}} />
+          <Image style={styles.ads_item_side} source={{uri: this.state.MARKET_RECOMMEND_IMG_URIS[0]}} />
+          <Image style={styles.ads_item_middle} source={{uri: this.state.MARKET_RECOMMEND_IMG_URIS[1]}} />
+          <Image style={styles.ads_item_side} source={{uri: this.state.MARKET_RECOMMEND_IMG_URIS[2]}} />
         </View>
       </View>
     );
@@ -34,17 +36,17 @@ var MarketRecomendView = React.createClass({
 
 });
 
-
 const styles = StyleSheet.create ({
   ads_title: {
     fontSize: 12,
     color: '#999999',
-    marginTop: 8,
-    marginLeft: 8
+    marginTop: 12,
+    marginLeft: 8,
   },
   ads_container: {
     flex:1,
     height: 180,
+    marginTop: 4,
     justifyContent: 'center',
     flexDirection: 'row',
     overflow: 'hidden'
@@ -63,4 +65,4 @@ const styles = StyleSheet.create ({
   }
 });
 
-module.exports = MarketRecomendView;
+module.exports = MarketRecommendView;
