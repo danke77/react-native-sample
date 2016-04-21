@@ -2,7 +2,6 @@ import React, {
   Component,
   StyleSheet,
   Text,
-  Dimensions,
   View,
 } from 'react-native';
 
