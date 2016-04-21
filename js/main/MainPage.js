@@ -5,7 +5,6 @@ import React, {
   Image,
   View,
   Dimensions,
-  ScrollView,
 } from 'react-native';
 
 import TabNavigator from 'react-native-tab-navigator';
@@ -15,7 +14,7 @@ import CategoryPage from '../business/CategoryPage';
 import ShoppingCartPage from '../business/ShoppingCartPage';
 import MinePage from '../business/MinePage';
 
-const HOME = '主页';
+const HOME = '首页';
 const ICON_HOME_SELECTED = require('../../images/tabs/home_selected.png');
 const ICON_HOME_UNSELECTED = require('../../images/tabs/home_unselected.png');
 
@@ -101,10 +100,10 @@ class MainPage extends Component {
           tabBarStyle={isShowTabBar ? styles.tab : styles.tabHide}
           sceneStyle={{ paddingBottom: 0}}>
 
-          {this._renderTabItem(ICON_HOME_UNSELECTED, ICON_HOME_SELECTED, HOME, MainPage._createSimpleChildView(HOME))}
-          {this._renderTabItem(ICON_CATEGORY_UNSELECTED, ICON_CATEGORY_SELECTED, CATEGORY, MainPage._createSimpleChildView(CATEGORY))}
-          {this._renderTabItem(ICON_SHOPPING_CART_UNSELECTED, ICON_SHOPPING_CART_SELECTED, SHOPPING_CART, MainPage._createSimpleChildView(SHOPPING_CART))}
-          {this._renderTabItem(ICON_MINE_UNSELECTED, ICON_MINE_SELECTED, MINE, MainPage._createSimpleChildView(MINE))}
+          {this._renderTabItem(ICON_HOME_UNSELECTED, ICON_HOME_SELECTED, HOME, this._createChildView(HOME))}
+          {this._renderTabItem(ICON_CATEGORY_UNSELECTED, ICON_CATEGORY_SELECTED, CATEGORY, this._createChildView(CATEGORY))}
+          {this._renderTabItem(ICON_SHOPPING_CART_UNSELECTED, ICON_SHOPPING_CART_SELECTED, SHOPPING_CART, this._createChildView(SHOPPING_CART))}
+          {this._renderTabItem(ICON_MINE_UNSELECTED, ICON_MINE_SELECTED, MINE, this._createChildView(MINE))}
         </TabNavigator>
       </View >
     );
