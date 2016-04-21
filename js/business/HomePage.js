@@ -11,6 +11,7 @@ import React, {
 import ViewPager from 'react-native-viewpager'; 
 
 import TopBanner from './TopBanner';
+import MarketRecommend from './MarketRecommend';
 
 class HomePage extends Component {
 
@@ -18,37 +19,13 @@ class HomePage extends Component {
     return(
       <ScrollView style={{flex: 1, marginBottom: 56}}>
         <TopBanner />
-        <MarketRecomendView />
+        <MarketRecommend />
         <DailyRecomendView />
         <DailyRecomendView />
       </ScrollView>
     );
   }
 }
-
-var MarketRecomendView = React.createClass({
-  getInitialState: function() {
-    return {
-      ad1ImageUri: 'http://img.zcool.cn/community/0314bb75715ac060000011e0154f4dd.jpg@500w_376h_1c_1e_1l_2o',
-      ad2ImageUri: 'http://img.zcool.cn/community/03180ff5714a69c0000011e01abac3c.jpg@500w_376h_1c_1e_1l_2o',
-      ad3ImageUri: 'http://img.zcool.cn/community/031591f5714976c000001ba12400d86.jpg@500w_376h_1c_1e_1l_2o'
-    };
-  },
-
-  render: function() {
-    return (
-      <View>
-        <Text style={styles.ads_title}>优店推荐</Text>
-        <View style={styles.ads_container}>
-          <Image style={styles.ads_item_side} source={{uri: this.state.ad1ImageUri}} />
-          <Image style={styles.ads_item_middle} source={{uri: this.state.ad2ImageUri}} />
-          <Image style={styles.ads_item_side} source={{uri: this.state.ad3ImageUri}} />
-        </View>
-      </View>
-    );
-  }
-
-});
 
 var DailyRecomendView = React.createClass ({
   getInitialState: function() {

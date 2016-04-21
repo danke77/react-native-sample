@@ -13,7 +13,7 @@ import ViewPager from 'react-native-viewpager';
 
 var deviceWidth = Dimensions.get('window').width;
 
-const TOP_BANNER_IMG_URLS = [
+const TOP_BANNER_IMG_URIS = [
   'https://dn-kdt-img.qbox.me/upload_files/2016/04/20/FtRlZuhZsKKfR9vb9M6abrlpV9l8.png?imageView2/2/w/600/h/0/q/75/format/webp',
   'https://dn-kdt-img.qbox.me/upload_files/2016/04/11/FomW8kzqNAIh5TJ4kUuWKc_LUwrJ.png?imageView2/2/w/600/h/0/q/75/format/webp',
   'https://dn-kdt-img.qbox.me/upload_files/2016/04/13/FugNmSuKK42eXI_6XIlE02ZrgDRw.png?imageView2/2/w/600/h/0/q/75/format/webp',
@@ -35,7 +35,7 @@ var TopBanner = React.createClass({
     });
 
     return {
-      dataSource: dataSource.cloneWithPages(TOP_BANNER_IMG_URLS),
+      dataSource: dataSource.cloneWithPages(TOP_BANNER_IMG_URIS),
     };
   },
 
