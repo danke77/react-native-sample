@@ -4,10 +4,15 @@
  */
 
 import { 
-  AppRegistry, 
+  AppRegistry,
+  Component,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Navigator,
+  TouchableOpacity,
 } from 'react-native';
-
-// import MainPage from './js/main/MainPage';
 
 var _navigator;
 var MainPage = require('./js/main/MainPage');

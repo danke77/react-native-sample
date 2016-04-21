@@ -8,11 +8,15 @@ import React, {
   ScrollView,
 } from 'react-native';
 
+import ViewPager from 'react-native-viewpager'; 
+
+import TopBanner from './TopBanner';
+
 class HomePage extends Component {
 
   render() {
     return(
-      <ScrollView style={{flex:1}}>
+      <ScrollView style={{flex: 1, marginBottom: 56}}>
         <TopBanner />
         <MarketRecomendView />
         <DailyRecomendView />
@@ -22,20 +26,6 @@ class HomePage extends Component {
   }
 }
 
-var TopBanner = React.createClass({
-  getInitialState: function() {
-    return {
-      bannerUrl: 'http://img.zcool.cn/community/031751a571465cb0000011e01ad1080.jpg@500w_376h_1c_1e_1l_2o'
-    };
-  },
-  render: function() {
-    console.log(this.state.bannerUrl);
-    return(
-      <Image style={styles.banner_img} source={{uri: this.state.bannerUrl}} />
-      );
-  }
-});
-
 var MarketRecomendView = React.createClass({
   getInitialState: function() {
     return {
@@ -44,6 +34,7 @@ var MarketRecomendView = React.createClass({
       ad3ImageUri: 'http://img.zcool.cn/community/031591f5714976c000001ba12400d86.jpg@500w_376h_1c_1e_1l_2o'
     };
   },
+
   render: function() {
     return (
       <View>
@@ -68,6 +59,7 @@ var DailyRecomendView = React.createClass ({
       itemImages: []
     };
   },
+
   render: function() {
     return (
       <View style={styles.daily_item_container}>
