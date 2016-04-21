@@ -31,7 +31,9 @@ var DailyRecommendView = React.createClass ({
         <View style={styles.daily_main_layout}>
           <Image style={styles.daily_main_img} source={{uri: 'http://img.zcool.cn/community/031fecd5714db870000013f400112f3.jpg@500w_376h_1c_1e_1l_2o'}} />
         </View>
-        <ScrollView horizontal={true} style={styles.daily_scroll_layout}>
+        <ScrollView 
+          horizontal={true} 
+          style={styles.daily_scroll_layout}>
           <Image style={styles.daily_scroll_img} source={{uri: 'http://img.zcool.cn/community/031921357159db80000013f40178a85.jpg@500w_376h_1c_1e_1l_2o'}} />
           <Image style={styles.daily_scroll_img} source={{uri: 'http://img.zcool.cn/community/031921357159db80000013f40178a85.jpg@500w_376h_1c_1e_1l_2o'}} />
           <Image style={styles.daily_scroll_img} source={{uri: 'http://img.zcool.cn/community/031921357159db80000013f40178a85.jpg@500w_376h_1c_1e_1l_2o'}} />
@@ -80,14 +82,15 @@ const styles = StyleSheet.create ({
     width: deviceWidth
   },
   daily_scroll_layout: {
-    height: 125
+    height: 125,
   },
   daily_scroll_img: {
     height: 100,
     width: 100,
     borderWidth: 1,
     borderColor: '#cccccc',
-    margin: 8,
+    marginTop: 8,
+    marginLeft: 8
   }
 });
 
