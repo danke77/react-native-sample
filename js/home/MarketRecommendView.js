@@ -9,9 +9,9 @@ import React, {
 import ViewPager from 'react-native-viewpager'; 
 
 const MARKET_RECOMMEND_IMG_URIS = [
-  'http://img.zcool.cn/community/03180ff5714a69c0000011e01abac3c.jpg@500w_376h_1c_1e_1l_2o',
-  'http://img.zcool.cn/community/0314bb75715ac060000011e0154f4dd.jpg@500w_376h_1c_1e_1l_2o',
-  'http://img.zcool.cn/community/031591f5714976c000001ba12400d86.jpg@500w_376h_1c_1e_1l_2o'
+  'https://dn-kdt-img.qbox.me/upload_files/2015/11/25/FvBI92OV8gsr186uDCEa_HlHRK9e.jpg?imageView2/2/w/320/h/0/q/75/format/webp',
+  'https://dn-kdt-img.qbox.me/upload_files/2015/11/04/FmcFNmdwvBJ5vyNEamy2X71bhh7P.jpg?imageView2/2/w/320/h/0/q/75/format/webp',
+  'https://dn-kdt-img.qbox.me/upload_files/2015/09/21/FnHNsQGA7LAIMiKAuWHqsGsiipRT.jpg?imageView2/2/w/320/h/0/q/75/format/webp'
 ]
 
 var MarketRecommendView = React.createClass({
