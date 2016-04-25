@@ -8,6 +8,8 @@ import React, {
   ScrollView,
 } from 'react-native';
 
+const ICON_CALENDAR = require('../../images/calendar.png');
+
 var deviceWidth = Dimensions.get('window').width;
 
 var DailyRecommendView = React.createClass ({
@@ -16,7 +18,7 @@ var DailyRecommendView = React.createClass ({
       itemTitle: '',
       itemTitleIcon: '',
       itemMainImg: '',
-      itemImages: []
+      itemImgs: []
     };
   },
 
@@ -24,22 +26,21 @@ var DailyRecommendView = React.createClass ({
     return (
       <View style={styles.daily_item_container}>
         <View style={styles.daily_title_layout}>
-          <Image style={styles.daily_title_icon} source={require('../../images/calendar.png')} />
-          <Text style={styles.daily_title_title}>今日</Text>
+          <Image style={styles.daily_title_icon} source={ICON_CALENDAR} />
+          <Text style={styles.daily_title_title}>{this.props.itemTitle}</Text>
           <Text style={styles.daily_more}>更多 ></Text>
         </View>
         <View style={styles.daily_main_layout}>
-          <Image style={styles.daily_main_img} source={{uri: 'http://img.zcool.cn/community/031fecd5714db870000013f400112f3.jpg@500w_376h_1c_1e_1l_2o'}} />
+          <Image style={styles.daily_main_img} source={{uri: this.props.itemMainImg}} />
         </View>
-        <ScrollView 
-          horizontal={true} 
+        <ScrollView
+          horizontal={true}
           style={styles.daily_scroll_layout}>
-          <Image style={styles.daily_scroll_img} source={{uri: 'http://img.zcool.cn/community/031921357159db80000013f40178a85.jpg@500w_376h_1c_1e_1l_2o'}} />
-          <Image style={styles.daily_scroll_img} source={{uri: 'http://img.zcool.cn/community/031921357159db80000013f40178a85.jpg@500w_376h_1c_1e_1l_2o'}} />
-          <Image style={styles.daily_scroll_img} source={{uri: 'http://img.zcool.cn/community/031921357159db80000013f40178a85.jpg@500w_376h_1c_1e_1l_2o'}} />
-          <Image style={styles.daily_scroll_img} source={{uri: 'http://img.zcool.cn/community/031921357159db80000013f40178a85.jpg@500w_376h_1c_1e_1l_2o'}} />
-          <Image style={styles.daily_scroll_img} source={{uri: 'http://img.zcool.cn/community/031921357159db80000013f40178a85.jpg@500w_376h_1c_1e_1l_2o'}} />
-          <Image style={styles.daily_scroll_img} source={{uri: 'http://img.zcool.cn/community/031921357159db80000013f40178a85.jpg@500w_376h_1c_1e_1l_2o'}} />
+          {
+            this.props.itemImgs.map((itemImg, index) =>
+              <Image key={index} style={styles.daily_scroll_img} source={{uri: itemImg}} />
+            )
+          }
         </ScrollView>
       </View>
     );
